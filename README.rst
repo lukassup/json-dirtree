@@ -36,8 +36,23 @@ Alternatively use ``easy_install``:
 Usage
 -----
 
+
 .. code-block::
 
+    $ json-dirtree build --help
+    usage: json-dirtree build [-h] [-v | -q] [-o DIR] [dirs [dirs ...]]
+
+    Builds JSON output from directory and file tree.
+
+    positional arguments:
+    dirs                  source directories (default: ./src/* )
+
+    optional arguments:
+    -h, --help            show this help message and exit
+    -v, --verbose         more verbose
+    -q, --quiet           less verbose
+    -o DIR, --out-dir DIR
+                            output directory
 
 
 .. _development:
