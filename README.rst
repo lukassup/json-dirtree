@@ -2,9 +2,36 @@
     :target: https://travis-ci.org/lukassup/json-dirtree
 
 json-dirtree
-========
+============
 
 ``json-dirtree`` converts file and directory hierarchy to a JSON object
+
+.. _example:
+
+Example
+-------
+
+.. code-block:: bash
+
+    $ tree src
+    src
+    └── upper
+        └── lower
+            └── bottom
+
+    2 directories, 1 file
+
+    $ json-dirtree build
+    INFO:json_dirtree:building JSON tree for dirs: ['src/upper']
+    INFO:json_dirtree:writing JSON output to: './upper.json'
+    INFO:json_dirtree:done, 1 files written
+
+    $ cat upper.json
+    {
+        "lower": {
+            "bottom": "Hello"
+        }
+    }
 
 .. _installation:
 
